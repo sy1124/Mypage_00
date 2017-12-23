@@ -1,0 +1,230 @@
+@charset "utf-8";
+body {
+  font-size:1.9rem;
+  color: #665F5F;
+}
+h2{font-family: 'Noto Sans JP';}
+p{text-align: center;}
+ul,dl{font-family: 'Noto Sans JP';}
+a{text-decoration: none;}
+
+header  #nav{
+  width: 500px;
+  margin: 0 auto;
+}
+
+header > #nav > ul > li > a:link { color: #665F5F; }
+header > #nav > ul > li > a:visited {color:#665F5F; }
+header > #nav > ul > li > a:hover { color: #332F2F; }
+header > #nav > ul > li > a:active { color: #665F5F; }
+
+
+#obi{
+  position: relative;
+  width: 100vw;
+  height: 700px;
+  background-image: url(../img/obi_bg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+#logo{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  left: 20%;
+}
+
+article{
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  background-image: url(../img/wall3.jpg);
+  background-repeat: repeat;
+  background-position: left;
+  z-index: 0;
+}
+section{
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  margin: 0 auto;
+  z-index: 100;
+}
+
+section:nth-of-type(1){
+  box-shadow: 0 3px 10px -6px rgba(0, 0, 0, 0.4);
+}
+section:nth-of-type(2),section:nth-of-type(3){
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+.bg{
+  height: 500px;
+  background-size: cover ;
+  background-position: bottom;
+  background-attachment: fixed;
+  z-index: 50;
+}
+#bg1{background-image: url(../img/bg10.jpg);
+    background-position: center;}
+#bg2{background-image: url(../img/bg00.jpg);}
+#bg3{background-image: url(../img/bg08.jpg);position: relative;}
+
+
+#b1{
+  height: 222px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+#b1 > dl{
+  width: 200px;
+  margin: 0 auto;
+}
+#b1 > dl > dt{
+  margin-top: 10px;
+  font-size: 2rem;
+}
+#b1 > dl > dd{
+  margin-top: 8px;
+}
+
+.box{
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  margin: 50px auto;
+  padding-top: 20px;
+}
+.box > h2{
+  font-family: 'Imprima','ipaexm';
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+.box > h3{
+  color: crimson;
+  text-align: center;
+}
+
+.box > p{
+  text-align: left;
+  margin-top: 50px;
+}
+#top{
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  width: 50px;
+  height: 50px;
+  background-color: #998e8e;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 100;
+  line-height: 50px;
+  opacity: 0.7;
+}
+
+/*____FORM____*/
+#form{
+  position: relative;
+  margin: 0 auto 100px;
+  width: 100%;
+  box-shadow: 0 -3px 10px -6px rgba(0, 0, 0, 0.4);
+  z-index:100;}
+
+#form > div{}
+
+#form  h2{margin: 0 auto 20px;}
+
+form{width: 100%;margin: 0 auto;}
+form:nth-of-type(2),form:nth-of-type(3){width: 100px;}
+form > dl{width: 400px;}
+form > dl > dt:nth-of-type(4){margin-top: 10px;}
+
+
+input{text-align: center;}
+input, textarea{
+  font: 1em sans-serif;
+  width: 350px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+dl dt{margin-top: 30px;height: 35px;line-height: 30px;}
+
+
+#form > form > dl{
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;}
+}
+
+#form > form > dl dt{
+  margin-top: 30px;
+  height: 35px;
+  line-height: 30px;
+}
+
+#form > form > dl > dd{margin-top: 0;height: 35px;}
+
+#form > form > dl > dd:nth-of-type(4){height: 100px;}
+
+#check{width: 13px;display: none;}
+#check + .checkbox-icon{
+  position: relative;
+  vertical-align: middle;
+}
+#check + .checkbox-icon:before {
+  content: "\f372";
+  font-family: "Ionicons";
+  color: #ccc;
+  font-size: 22px;
+}
+#check:checked + .checkbox-icon:before {
+  content: "\f374";
+  color: #17bcdf;
+}
+
+#snd{
+  float: left;
+  margin-top: 0px;
+  margin-left: 40px;
+}
+#rst{
+  float: right;
+  margin-top: 0px;
+  margin-right: 40px;
+}
+#snd,#rst{
+  width: 100px;
+}
+
+.red{
+  position: relative;
+	display: inline-block;
+ 	margin: 1.5em auto 0;
+	padding: 7px 10px;
+  width: 330px;
+  height: 20px;
+ 	color: #555;
+	font-size: 16px;
+  border-radius: 5px;
+	background: #fbacac;
+}
+.red3{height: 50px;}
+.red > dd{margin-top: 0;}
+.red:before{
+  content: "";
+	position: absolute;
+	top: -30px;
+	left: 50%;
+ 	margin-left: -15px;
+	border: 15px solid transparent;
+	border-bottom: 15px solid #fbacac;
+}

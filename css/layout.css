@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+html { font-size:62.5%; = 10px }
+body { font-size:1.6rem; = 16px }
+font-family: Arial, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+font-family: 'Times New Roman', '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'メイリオ', Meiryo, serif;
+-------------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-weight: 500;
+  src: url(../font/NotoSansJP-Regular.otf) format('opentype');
+  src: url(../font/NotoSansJP-Bold) format('opentype');
+  src: url(../font/NotoSansJP-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: ipaexm;
+  src: url(../font/ipaexm.ttf) format("truetype");
+}
+@font-face {
+  font-family: Imprima;
+  src: url(../font/Imprima-Regular.ttf) ;
+}
+*{
+  font-family: 'Imprima','Noto Sans JP','ipaexm','Mairyo','ヒラギノ角ゴシック Pro',sans-serif;
+}
+
+html {
+  font-size:62.5%; = 10px;
+  position: relative;
+ }
+body {
+  width: 100%;
+  height: 100%;
+  font-size:1.9rem;
+  overflow: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+#wrapper{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+
+h1,h2,h3{
+  font-family: 'Imprima','Noto Sans JP';
+  font-weight: 500;
+  text-align: center;
+}
+p{text-align: center;line-height: 2.8rem;}
+
+img{
+  display: block;
+  margin: 0 auto;
+}
+ul{
+  padding-left: 0;
+  list-style-type: none;
+}
+
+a{text-decoration: none;}
+
+dl dt{text-align: center;}
+dl dd{
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+select{
+  text-align: center;
+  font: 1em sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+
+a:link { color: #000; } /*… 未訪問のリンク*/
+a:visited { color: #000; }  /*… 訪問済みのリンク*/
+a:hover { color: #000; }  /*… ポイント時のリンク*/
+a:active { color: #000; }  /*… 選択中のリンク*/
+/*header*/
+header{
+  position: fixed;
+  transform: translateY(-50px);
+  width: 100vw;
+  height: 50px;
+  background: rgba(255,255,255,0.7);
+  color: #665F5F;
+  overflow: hidden;
+  transition: top 0.4s ease-in-out;
+  -webkit-transition: top 0.4s ease-in-out;
+  -moz-transition: .4s;
+
+}
+header.fixed{
+  position: fixed;
+  transform: translateY(0px);
+  margin: 0 auto;
+  background: rgba(255,255,255,0.7);
+  transition: top 0.4s ease-in-out;
+  -webkit-transition: top 0.4s ease-in-out;
+  -moz-transition: 0.4s;
+  z-index: 1000;
+}
+#inner {
+  width: 100vw;
+  margin: 0 auto;
+}
+#inner:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/*_ハンバーガーメニュー_*/
+#nav-toggle {
+  display: none;
+  position: absolute;
+  margin: 10px 0;
+  top: 0;
+  right: 5%;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+#nav-toggle > div {position: relative;}
+
+#nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #666;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
+#nav-toggle span:nth-child(1) {
+    top: 0;
+}
+#nav-toggle span:nth-child(2) {
+    top: 11px;
+}
+#nav-toggle span:nth-child(3) {
+    top: 22px;
+}
+/*_ハンバーガーメニュー_*/
+
+
+header > h1{
+  padding-top: 16px;
+  margin:0 auto;
+  text-align: center;
+}
+  header  #nav  ul{
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 0;
+    font-size: 0;
+    text-align: center;
+  }
+  header  #nav > ul > li{
+    height: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #665F5F;
+    list-style-type: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+/*
+header  #nav > ul > li > a:link { color: #fff; }
+header  #nav > ul > li > a:visited {color:#fff; }
+header  #nav > ul > li > a:hover { color: #fff; }
+header  #nav > ul > li > a:active { color: #fff; }
+*/
+/*article*/
+article{
+  overflow: hidden;
+  height: auto !important;
+  margin: 0 auto ;
+}
+/*footer*/
+footer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  color: #FFEBEB;
+  font-weight: 700;
+  background-color: #4D4747;
+  text-align: center;
+}
+
+#footer > p{margin: 30px auto 0;font-weight: 500;}
+
+footer  h3{
+  margin: 0 auto;
+  padding-top: 70px;
+  font-weight: 500;
+}
+footer h4{margin: 0 auto;}
+footer ul{margin: 10px auto 0;}
+footer ul li{margin-bottom: 5px;}
+footer ul li a:link{color: #FFEBEB;font-weight: 500;}
+footer ul li a:hover{color: #FFEBEB;font-weight: 700;}
+footer ul li a:visited {color:#FFEBEB;font-weight: 500;}
+footer ul li a:active {color: #FFEBEB;font-weight: 500; }
+
+#f_flame{width: 500px;margin: 0 auto;overflow: hidden;}
+#f_left{float: left;width: 200px;text-align: left;margin-top: 30px;}
+#f_right{float: right;width: 200px;text-align: right;margin-top: 30px;}
+
+footer hr{margin: 50px auto 0;}
